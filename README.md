@@ -63,7 +63,7 @@ location / {
     try_files $uri $uri/ /index.php?$query_string;
 }
 ```
-
+**apache .htaccess配置**
 ``` apache
 RewriteEngine On
 RewriteBase /
