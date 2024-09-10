@@ -64,6 +64,14 @@ location / {
 }
 ```
 
+``` apache
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [QSA,L]
+```
+
 **二级目录配置**
 
 比如，`/shorturl/`以 `/` 结尾，实际访问 `http://ip/shorturl/`
